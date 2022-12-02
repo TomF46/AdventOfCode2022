@@ -36,19 +36,15 @@ function isEmptyOrSpaces(str) {
 }
 
 
-function getElfWithMostCalories() {
-    return calorieCounts.reduce((prev, current) => (prev > current) ? prev : current);
-}
-
-function getTopThreeCombinedCalories() {
+function getTotalCaloriesOfTopElves(numberOfElves) {
     return calorieCounts.sort((e1, e2) => {
         return e2 - e1;
-    }).slice(0, 3).reduce((total, current) => {
+    }).slice(0, numberOfElves).reduce((total, current) => {
         return total + current;
     }, 0);
 }
 
 collectElfCalorieTotals().then(() => {
-    console.log(`The elf with the most calories has ${getElfWithMostCalories()} calories`);
-    console.log(`The total amount of calories held by the top 3 elfs are ${getTopThreeCombinedCalories()} calories`);
+    console.log(`The elf with the most calories has ${getTotalCaloriesOfTopElves(1)} calories`);
+    console.log(`The total amount of calories held by the top 3 elfs are ${getTotalCaloriesOfTopElves(3)} calories`);
 });
