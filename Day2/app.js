@@ -1,6 +1,6 @@
-const events = require('events');
-const fs = require('fs');
-const readline = require('readline');
+import events from 'events';
+import fs from 'fs'
+import readline from 'readline';
 
 let totalScore = 0;
 let totalScore2 = 0;
@@ -9,13 +9,13 @@ let totalScore2 = 0;
 const scoreGuide = {
     A: { X: 4, Y: 8, Z: 3 },
     B: { X: 1, Y: 5, Z: 9 },
-    C: { X: 7, Y: 2,  Z: 6 }
-  };
-  const scoreGuide2 = {
+    C: { X: 7, Y: 2, Z: 6 }
+};
+const scoreGuide2 = {
     A: { X: 3, Y: 4, Z: 8 },
     B: { X: 1, Y: 5, Z: 9 },
-    C: { X: 2, Y: 6,  Z: 7 }
-  };
+    C: { X: 2, Y: 6, Z: 7 }
+};
 
 async function renderGames() {
     try {

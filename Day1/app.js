@@ -1,6 +1,6 @@
-const events = require('events');
-const fs = require('fs');
-const readline = require('readline');
+import events from 'events';
+import fs from 'fs'
+import readline from 'readline';
 
 let calorieCounts = [];
 let currentElfCalories = 0;
